@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-time API Request Count</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="r.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="api-list-title">Real-time API Request Count</h1>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Total API Requests</h5>
+        <p class="card-text" id="requestCount">Loading...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
+  <script src="s.js"></script>
+</body>
+</html>

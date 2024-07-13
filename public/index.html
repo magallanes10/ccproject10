@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API EXPLORER CC PROJECTS API</title>
+    <link rel="icon" href="https://files.catbox.moe/kdqa0t.png" type="image/x-icon"> 
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .toggle-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 40px;
+            height: 30px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .bar {
+            display: block;
+            width: 100%;
+            height: 5px;
+            background-color: #007bff;
+            margin: 6px 0;
+            transition: all 0.3s;
+            border-radius: 3px;
+        }
+
+        .card-list {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: -50%;
+            height: 100%;
+            width: 50%;
+            background: white;
+            border-right: 1px solid #ccc;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+            z-index: 10;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .card-list.show {
+            display: block;
+            animation: slideIn 0.3s forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                left: -50%;
+            }
+            to {
+                left: 0;
+            }
+        }
+
+        .card-list.hide {
+            animation: slideOut 0.3s forwards;
+        }
+
+        @keyframes slideOut {
+            from {
+                left: 0;
+            }
+            to {
+                left: -50%;
+            }
+        }
+
+        .list-item {
+            margin: 5px 0;
+            cursor: pointer;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .list-item:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="welcome-popup" id="welcomePopup">
+    <div class="popup-content">
+        <p>WELCOME TO APIS EXPLORER BY JONELL MAGALLANES</p>
+        <button class="popup-btn">OK</button>
+    </div>
+</div>
+
+<h1 class="api-list-title">PROJECT CC APIS</h1>
+<div class="toggle-button" id="toggleButton">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</div>
+
+<div id="cardList" class="card-list">
+    <button class="close-button" id="closeButton" style="cursor:pointer;">✖️</button>
+    <div class="list-item" onclick="window.location.href='/request.html'">Request Count</div>
+       <div class="list-item" onclick="window.location.href='/canvas.html'">Canvas API</div>
+    <div class="list-item" onclick="window.location.href='https://appstate-getterjonellccproject.onrender.com/'">Appstate Getter</div>
+    <div class="list-item" onclick="window.location.href='https://dreamcamp-community.onrender.com/'">Visit DreamCamp Community</div>
+ <div class="list-item" onclick="window.location.href='https://portfoliojonellmagallanes.adaptable.app'">About Developer</div>
+</div>
+</div>
+                
+<div id="api-list" class="mt-4"></div>
+
+<div id="background-wrap">
+    <div class="x1">
+        <div class="cloud"></div>
+    </div>
+    <div class="x2">
+        <div class="cloud"></div>
+    </div>
+    <div class="x3">
+        <div class="cloud"></div>
+    </div>
+    <div class="x4">
+        <div class="cloud"></div>
+    </div>
+    <div class="x5">
+        <div class="cloud"></div>
+    </div>
+</div>
+
+<div class="stars"></div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#toggleButton').click(function() {
+            if ($('#cardList').hasClass('show')) {
+                $('#cardList').removeClass('show').addClass('hide');
+                setTimeout(() => {
+                    $('#cardList').hide();
+                }, 300);
+            } else {
+                $('#cardList').removeClass('hide').addClass('show').show();
+            }
+        });
+
+        $('#closeButton').click(function() {
+            $('#cardList').removeClass('show').addClass('hide');
+            setTimeout(() => {
+                $('#cardList').hide();
+            }, 300);
+        });
+    });
+    
+</script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+[
+  {
+    "role": "user",
+    "parts": [
+      {
+        "text": "hi"
+      }
+    ]
+  },
+  {
+    "role": "model",
+    "parts": [
+      {
+        "text": "Hi there! How can I help you today? \n"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "parts": [
+      {
+        "text": "what my earliest ask questions?"
+      }
+    ]
+  },
+  {
+    "role": "model",
+    "parts": [
+      {
+        "text": "I do not have access to your past conversations or any personal information about you. As an AI, I have no memory of past interactions. \n\nIf you'd like to ask me a question, I'm here to help! 😊 \n"
+      }
+    ]
+  }
+]

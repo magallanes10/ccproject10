@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #001c3d, #000000);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; 
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.api-list-title {
+  color: #ffffff;
+  text-align: center;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0; 
+  transition: opacity 0.5s ease;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.btn-light-blue {
+  background-color: #87CEFA;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-light-blue:hover {
+  background-color: #5f9ea0;
+}
+
+.moon {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  width: 80px;
+  z-index: 1;
+}
+
+.stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  animation: blink 2s infinite;
+  border-radius: 50%;
+}
+
+@keyframes blink {
+  0%, 100% {
+      transform: scale(1);
+      opacity: 0.5;
+  }
+  50% {
+      transform: scale(1.5);
+      opacity: 1;
+  }
+}
+
+.welcome-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 9999;
+  overflow-x: hidden; 
+  
+}
+
+.popup-content {
+  text-align: center;
+}
+
+.popup-btn {
+  background-color: #87CEFA;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 768px) {
+  .container {
+      padding: 10px;
+  }
+
+  .card {
+      margin-bottom: 15px;
+  }
+
+  .card-title {
+      font-size: 20px;
+  }
+
+  .card-text {
+      font-size: 16px;
+  }
+}
