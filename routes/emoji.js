@@ -2,25 +2,23 @@ const express = require('express');
 const axios = require('axios');
 const router = express.Router();
 
-router.get('/text', async (req, res) => {
-  try {
-    const content = req.query.emoji;
-    const response = await axios.get(`https://jonellccprojectapis10.adaptable/api/chatgpt?input=${encodeURIComponent(content)}`);
+router.get('/message/emoji', async (req, res) => {
+    const text = req.query.text;
 
-    const gptResponse = response.data.result.gptResult.gpt;
-    const emojiOnly = gptResponse.match(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu).join('');
+    if (!text) {
+        return res.status(400).json({ error: 'Parameter "text" is required' });
+    }
 
-    const modifiedResponse = {
-      status: 200,
-      creator: "Jonell Magallanes",
-      result: emojiOnly
-    };
+    try {
+        const response = await axios.get(`https://hercai.onrender.com/v3/hercai?question=can you only response only emoji based on the context and badwords is valid to send the emoji only and based on this words > ${encodeURIComponent(text)}`);
+        const { reply } = response.data;
 
-    res.json(modifiedResponse);
-  } catch (error) {
-    console.error('Error:', error.message);
-    res.status(500).send('Internal Server Error');
-  }
+        return res.json({
+            emoji: reply
+        });
+    } catch (error) {
+        return res.status(500).json({ error: 'An error occurred while fetching data' });
+    }
 });
 
 module.exports = router;
