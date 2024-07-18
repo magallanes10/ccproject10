@@ -38,8 +38,7 @@ async function removeBg(imageURL) {
 }
 
 router.get('/removebg', async (req, res) => {
-  const imageURL = req.query.url;
-
+const imageURL = req.originalUrl.split('/api/removebg?url=')[1];
   if (!imageURL) {
     return res.status(400).send('Image URL is required');
   }
