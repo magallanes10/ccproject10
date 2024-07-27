@@ -53,7 +53,7 @@ function renderApiList() {
         { name: "Gemini AI", description: "Chat With Gemini AI New AI from Google LLM (ONLY TEXT)", usage: "/api/gen?ask="},
         { name: "Gemini Vision Pro", description: "Gemini Image Recognition to help you answer using image to describe", usage: "/api/geminivision?ask=&url="},
         { name: "GPT Conversational Continues", description: "Chat with GPT Feature Conversation Continue to interact the AI Continues and Chats", usage: "/api/gptconvo?ask=hello&id=1"},
-        { name: "Riddle API", description: "Get Random Riddle Logic with Answer", usage: "/api/randomriddle"},
+        { name: "Riddle API", description: "Get Random Riddle Logic with Answer", usage: "/api/randomriddle"}, { name: "YouTube Downloader", description: "You can download youtube link video and audio", usage: "/api/ytdl?url="},
         { name: "Google Scholar", description: "Allows you to search the Documents like for research papers and sources of information library", usage: "/api/gs?q=biology"},
         { name: "Instagram Stalk", description: "This Api Allows you to stalk the user from Instagram", usage: "/api/insta/stalk?ig="},
         { name: "IP LOCATOR", description: "This API is to use to locate the users using ip adress but in public ip only", usage: "/api/ip?ipnum="}, { name: "LLMA AI", description: "Chat With LLMA AI Powered By Facebook", usage: "/api/meta? prompt="}, { name: "Pinterest Search Images", description: "Allows you to search images from Pinterest and browse", usage: "/api/pin?title=wallpaper&count=10"}, { name: "Remini API", description: "You want to increase the image use this api powered by Remini", usage: "/api/remini?imageUrl="},
