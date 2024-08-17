@@ -1,0 +1,38 @@
+name: Deploy to Neocities
+
+# Only run on changes to main branch.
+on:
+  push:
+    branches:
+      - main
+
+concurrency: # Prevent concurrent deploys from causing issues.
+  group: deploy-to-neocities
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+
+      - name: Install dependencies and build
+        run: |
+          npm install
+          npm run build
+
+      # Deploy the built site to Neocities
+      - name: Deploy to Neocities
+        uses: bcomnes/deploy-to-neocities@v2
+        with:
+          api_token: "4966416c9c4cdeeafb45d7c2cea45c61"
+          cleanup: false
+          dist_dir: public
