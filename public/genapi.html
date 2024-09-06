@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generator Image AI API CC PROJECTS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,17 +19,6 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             animation: bounce 2s infinite;
-        }
-        button {
-            padding: 10px 15px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
         }
         @keyframes bounce {
             0%, 100% {
@@ -45,20 +35,20 @@
 
     <div class="api">
         <h3>Generate Cartoon Image</h3>
-        <p>Endpoint: <code>/gen?prompt=&style=cartoon</code></p>
-        <button onclick="tryAPI('A squirrel', 'cartoon')">Try API</button>
+        <p>Endpoint: <code>/api/gen?prompt=&style=cartoon</code></p>
+        <a class="btn btn-info" href="#" onclick="tryAPI('A squirrel', 'cartoon')">Try API</a>
     </div>
 
     <div class="api">
         <h3>Generate Paint Image</h3>
-        <p>Endpoint: <code>/gen?prompt=&style=paint</code></p>
-        <button onclick="tryAPI('A village', 'paint')">Try API</button>
+        <p>Endpoint: <code>/api/gen?prompt=&style=paint</code></p>
+        <a class="btn btn-info" href="#" onclick="tryAPI('A village', 'paint')">Try API</a>
     </div>
 
     <div class="api">
         <h3>Generate Realistic Image</h3>
-        <p>Endpoint: <code>/gen?prompt=&style=realistic</code></p>
-        <button onclick="tryAPI('A colorful photo of a young lady', 'realistic')">Try API</button>
+        <p>Endpoint: <code>/api/gen?prompt=&style=realistic</code></p>
+        <a class="btn btn-info" href="#" onclick="tryAPI('A colorful photo of a young lady', 'realistic')">Try API</a>
     </div>
 
     <script>
