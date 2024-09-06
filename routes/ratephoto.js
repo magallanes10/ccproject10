@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const AiRateMyPhoto = require('./routes/data/rate'); 
+const AiRateMyPhoto = require('../routes/data/rate.js'); 
 
 router.get('/ratephoto', async (req, res) => {
   const { url } = req.originalUrl.split('/api/ratephoto?url=')[1];
