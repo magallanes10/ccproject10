@@ -1,10 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const AiRateMyPhoto = require('../rate'); 
+const AiRateMyPhoto = require('./routes/data/rate'); 
 
-router.get('/', async (req, res) => {
-  const { url } = req.query;
-
+router.get('/ratephoto', async (req, res) => {
+  const { url } = req.originalUrl.split('/api/ratephoto?url=')[1];
   if (!url) {
     return res.status(400).json({ error: 'No URL provided' });
   }
