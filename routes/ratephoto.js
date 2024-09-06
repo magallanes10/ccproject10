@@ -72,15 +72,15 @@ const AiRateMyPhoto = async (imageUrl) => {
   }
 };
 
-router.get('/ratephoto', async (req, res) => {
- // const { url } = req.query;
-    const { url } = req.originalUrl.split('/api/ratephoto?url=')[1];
-  if (!url) {
+router.get('/ratep', async (req, res) => {
+  const { photo } = req.query;
+
+  if (!photo) {
     return res.status(400).json({ error: 'Please provide a photo URL' });
   }
 
   try {
-    const result = await AiRateMyPhoto(url);
+    const result = await AiRateMyPhoto(photo);
     res.json(result);
   } catch (error) {
     res.status(500).json({ error: error.message });
