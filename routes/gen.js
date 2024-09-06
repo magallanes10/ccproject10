@@ -43,8 +43,9 @@ router.get("/gen", async (req, res) => {
     try {
         const base64Image = await generateImage(prompt, provider, providerOptions);
         const imagePath = path.join(__dirname, "image.jpg");
+        const imageBuffer = Buffer.from(base64Image, 'base64');
 
-        fs.writeFile(imagePath, base64Image, { encoding: "base64" }, function (err) {
+        fs.writeFile(imagePath, imageBuffer, function (err) {
             if (err) return res.status(500).send("Error writing the file: " + err);
 
             res.sendFile(imagePath, function (err) {
