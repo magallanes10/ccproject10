@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Image AI API CC PROJECTS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .api {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            animation: bounce 2s infinite;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Generator Image AI API CC PROJECTS</h1>
+
+    <div class="api">
+        <h3>Generate Cartoon Image</h3>
+        <p>Endpoint: <code>/gen?prompt=&style=cartoon</code></p>
+        <button onclick="tryAPI('A squirrel', 'cartoon')">Try API</button>
+    </div>
+
+    <div class="api">
+        <h3>Generate Paint Image</h3>
+        <p>Endpoint: <code>/gen?prompt=&style=paint</code></p>
+        <button onclick="tryAPI('A village', 'paint')">Try API</button>
+    </div>
+
+    <div class="api">
+        <h3>Generate Realistic Image</h3>
+        <p>Endpoint: <code>/gen?prompt=&style=realistic</code></p>
+        <button onclick="tryAPI('A colorful photo of a young lady', 'realistic')">Try API</button>
+    </div>
+
+    <script>
+        function tryAPI(prompt, style) {
+            const baseUrl = '/api/gen'; 
+            const url = `${baseUrl}?prompt=${encodeURIComponent(prompt)}&style=${style}`;
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
