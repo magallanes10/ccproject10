@@ -72,9 +72,9 @@ const AiRateMyPhoto = async (imageUrl) => {
   }
 };
 
-router.get('/rate', async (req, res) => {
-  const { url } = req.query;
-
+router.get('/ratephoto', async (req, res) => {
+ // const { url } = req.query;
+    const { url } = req.originalUrl.split('/api/ratephoto?url=')[1];
   if (!url) {
     return res.status(400).json({ error: 'Please provide a photo URL' });
   }
