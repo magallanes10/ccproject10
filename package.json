@@ -49,6 +49,7 @@
     "string-similarity": "^4.0.4",
     "upscayl-node": "^1.4.4",
     "you-ai": "^3.0.0",
-    "youtube-to-mp3-poji": "^1.0.4"
+    "youtube-to-mp3-poji": "^1.0.4",
+     "wikipedia": "^2.1.2"
   }
 }
