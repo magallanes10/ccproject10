@@ -6,7 +6,7 @@ const searchRouter = express.Router();
 searchRouter.get('/gs', async (req, res) => {
   try {
     const query = req.query.q || 'biology';
-    const apiKey = 'be63a121d0d63b0faa8188c4069c77e90bcab302c79a01e1fc58f1cc1776282e';
+    const apiKey = 'b2c5b4432c0a92a2084c551808540bb1998fd9e224a3629bc3c5943d0c0bf1c0';
 
     getJson({
       engine: 'google_scholar',
