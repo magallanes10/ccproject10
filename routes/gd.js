@@ -14,12 +14,14 @@ router.get("/gd", async (req, res) => {
       "mulpan geometry dash",
       "congregation jumpscare",
       "tidal wave gd",
+      "ncs geometry dash",
+      "ncs nexus gd"
     ];
     const randomIndex = Math.floor(Math.random() * edits.length);
     const randomEdit = edits[randomIndex];
 
     const response = await axios.get(
-      `https://jonellccprojectapis10.adaptable.app/api/tiktok/searchvideo?keywords=${encodeURIComponent(
+      `https://ccexplorerapisjonell-harold-hutchinss-projects.vercel.app/api/tiktok/searchvideo?keywords=${encodeURIComponent(
         randomEdit,
       )}`,
       {
