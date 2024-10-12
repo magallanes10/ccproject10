@@ -11,8 +11,8 @@ const generateRandomToken = (length = 64) => {
     return crypto.randomBytes(length / 2).toString('hex');
 };
 
-router.get('/spotifydl', async (req, res) => {
-    const spotifyUrl = req.params.url;
+router.get('/spt', async (req, res) => {
+    const spotifyUrl = req.query.url;
 
     if (!spotifyUrl) {
         return res.status(400).json({ error: 'Please provide a Spotify URL.' });
