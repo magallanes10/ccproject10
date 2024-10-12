@@ -50,7 +50,7 @@ router.get('/spt', async (req, res) => {
             if (downloadResponse.data.status === 'success') {
                 return res.json({
                     status: true,
-                    owner: 'JrDev06',
+                    owner: 'JrDev06 and CC PROJECTS',
                     song_name: trackData.song_name,
                     artist: trackData.artist,
                     album: trackData.album_name,
@@ -67,7 +67,7 @@ router.get('/spt', async (req, res) => {
             return res.status(500).json({ error: 'Failed to retrieve metadata for download.' });
         }
     } catch (error) {
-        return res.status(500).json({ error: 'An error occurred while processing your request.' });
+        return res.status(500).json({ error: `An error occurred while processing your request at error of ${erro}` });
     }
 });
 
